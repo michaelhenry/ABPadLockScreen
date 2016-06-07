@@ -111,7 +111,6 @@
         _requiresRotationCorrection = NO;
         
         _enterPasscodeLabel = [self standardLabel];
-        _enterPasscodeLabel.numberOfLines = 0;
         _enterPasscodeLabel.text = [self getLocalizedString:@"ENTER_PASSCODE"];
         
         _detailLabel = [self standardLabel];
@@ -386,7 +385,7 @@
 #pragma mark - Helper Methods
 - (void)setDefaultStyles
 {
-    _enterPasscodeLabelFont = [UIFont systemFontOfSize:18];
+    _enterPasscodeLabelFont = [UIFont systemFontOfSize:17];
     _detailLabelFont = [UIFont systemFontOfSize:14];
     
     _labelColor = [UIColor whiteColor];
@@ -437,7 +436,7 @@
 		top = NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_6_1 ? 30 : 80;;
 	}
 	
-    self.enterPasscodeLabel.frame = CGRectMake(([self correctWidth]/2) - 155, top, 310, 46);
+    self.enterPasscodeLabel.frame = CGRectMake(([self correctWidth]/2) - 155, top, 310, 23);
     [self.contentView addSubview:self.enterPasscodeLabel];
 	
 	CGFloat pinSelectionTop = self.enterPasscodeLabel.frame.origin.y + self.enterPasscodeLabel.frame.size.height + 17.5;
